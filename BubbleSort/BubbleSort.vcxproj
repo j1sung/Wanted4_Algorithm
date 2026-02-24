@@ -13,8 +13,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{860b6d14-3643-4ac7-bdb2-530746c89a1c}</ProjectGuid>
-    <RootNamespace>Random</RootNamespace>
+    <ProjectGuid>{8a4735f4-e899-40ec-bb05-e160b1e56238}</ProjectGuid>
+    <RootNamespace>BubbleSort</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
