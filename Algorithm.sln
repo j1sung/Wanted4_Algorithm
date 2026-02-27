@@ -19,6 +19,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MergeSort", "MergeSort\Merg
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HeapSort", "HeapSort\HeapSort.vcxproj", "{FE550F6F-33EF-4312-B724-6DB53F2AE3CA}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AStarPathFinding", "AStarPathFinding\AStarPathFinding.vcxproj", "{74AA260B-963D-467D-8312-2F17B56F41BE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -57,6 +59,10 @@ Global
 		{FE550F6F-33EF-4312-B724-6DB53F2AE3CA}.Debug|x64.Build.0 = Debug|x64
 		{FE550F6F-33EF-4312-B724-6DB53F2AE3CA}.Release|x64.ActiveCfg = Release|x64
 		{FE550F6F-33EF-4312-B724-6DB53F2AE3CA}.Release|x64.Build.0 = Release|x64
+		{74AA260B-963D-467D-8312-2F17B56F41BE}.Debug|x64.ActiveCfg = Debug|x64
+		{74AA260B-963D-467D-8312-2F17B56F41BE}.Debug|x64.Build.0 = Debug|x64
+		{74AA260B-963D-467D-8312-2F17B56F41BE}.Release|x64.ActiveCfg = Release|x64
+		{74AA260B-963D-467D-8312-2F17B56F41BE}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
