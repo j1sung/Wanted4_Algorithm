@@ -18,11 +18,11 @@ std::vector<std::vector<int>> grid =
 	{ 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1 },
 	{ 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 3, 1 },
 	{ 1, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 1 },
-	{ 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1 },
-	{ 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1 },
+	{ 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1 },
+	{ 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1 },
 	{ 1, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 1, 1 },
 	{ 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1 },
-	{ 1, 2, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1 },
+	{ 1, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1 },
 	{ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
 };
 
@@ -57,8 +57,6 @@ int main()
 		SafeDelete(startNode);
 		SafeDelete(goalNode);
 
-		std::cout << "야!!!";
-
 		// 콘솔 복구 (넘어감).
 		return 0;
 	}
@@ -67,7 +65,7 @@ int main()
 	AStar aStar;
 
 	// 경로 탐색.
-	auto path = aStar.FindPath(startNode, goalNode, grid);
+	std::vector<Node*> path = aStar.FindPath(startNode, goalNode, grid);
 
 	// 성공한 경우.
 	if (!path.empty())
@@ -100,6 +98,7 @@ void FindStartAndGoalNode(const std::vector<std::vector<int>>& grid, Node*& outS
 		return;
 	}
 
+	// 행 바꿈
 	for (int y = 0; y < static_cast<int>(grid.size()); ++y)
 	{
 		// 다 찾았으면 종료.
@@ -107,7 +106,8 @@ void FindStartAndGoalNode(const std::vector<std::vector<int>>& grid, Node*& outS
 		{
 			break;
 		}
-
+		
+		// 열 바꿈
 		for (int x = 0; x < static_cast<int>(grid[0].size()); ++x)
 		{
 			// 다 찾았으면 종료.

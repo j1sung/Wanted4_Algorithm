@@ -44,7 +44,7 @@ std::vector<Node*> AStar::FindPath(Node* startNode, Node* goalNode, std::vector<
     openList.emplace_back(this->startNode);
 
     // 대각선 비용 상수.
-    const float diagonalcost = 1.41421345f;
+    const float diagonalcost = 1.41421345f; // 루트 2 -> 피타고라스 정리, 대각선
 
     // 비용 계산에 사용할 변수 값 설정.
     std::vector<Direction> directions =
@@ -53,7 +53,7 @@ std::vector<Node*> AStar::FindPath(Node* startNode, Node* goalNode, std::vector<
         {0,1,1.0f}, {0,-1,1.0f}, {1,0,1.0f}, {-1,0,1.0f},
         // 대각선 이동.
         {1,1,diagonalcost}, {-1,-1, diagonalcost},
-        {-1,1, diagonalcost}, {-1,-1,diagonalcost}
+        {-1,1, diagonalcost}, {1,-1,diagonalcost}
     };
 
     // 탐색 가능한 위치가 있으면 계속 진행.
