@@ -414,7 +414,7 @@ void AStar::DisplayGrid(std::vector<std::vector<int>>& grid)
             }
 
             // ºó °ø°£ = 0.
-            if (grid[y][x] == 5)
+            if (grid[y][x] == 0)
             {
                 SetConsoleTextAttribute(handle, white);
                 std::cout << "0 ";

@@ -57,6 +57,8 @@ int main()
 		SafeDelete(startNode);
 		SafeDelete(goalNode);
 
+		std::cout << "야!!!";
+
 		// 콘솔 복구 (넘어감).
 		return 0;
 	}
@@ -106,8 +108,14 @@ void FindStartAndGoalNode(const std::vector<std::vector<int>>& grid, Node*& outS
 			break;
 		}
 
-		for (int x = 0; x < static_cast<int>(grid.size()); ++x)
+		for (int x = 0; x < static_cast<int>(grid[0].size()); ++x)
 		{
+			// 다 찾았으면 종료.
+			if (outStartNode && outGoalNode)
+			{
+				break;
+			}
+
 			// 시작 노드.
 			if (grid[y][x] == 2)
 			{
